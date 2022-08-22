@@ -30,15 +30,16 @@ Test your function with your list of pets.
 '''
 
 class Pet():
-    def __init__(self, animal, food, noise, name):
+    def __init__(self, animal, color, food, noise, name):
         self.animal = animal
+        self.color = color
         self.food = food
         self.noise = noise
         self.name = name
 
-dog = Pet('dog','steak','woof','big boy')
-cat = Pet('cat','tuna','meow','death')
-fish = Pet('fish','other fish','splash','gideon')
+dog = Pet('dog','brown','steak','woof','big boy')
+cat = Pet('cat','gray','tuna','meow','death')
+fish = Pet('fish','blue','other fish','splash','gideon')
 
 pet_list = [dog,cat,fish]
 
