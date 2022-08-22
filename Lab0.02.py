@@ -37,11 +37,14 @@ class Pet():
         self.noise = noise
         self.name = name
 
+def pet_info(list):
+    for i in range(len(list)):
+        print(f"{list[i].name} eats {list[i].food}")
+
 dog = Pet('dog','brown','steak','woof','big boy')
 cat = Pet('cat','gray','tuna','meow','death')
 fish = Pet('fish','blue','other fish','splash','gideon')
 
 pet_list = [dog,cat,fish]
 
-for i in range(len(pet_list)):
-    print(f"{pet_list[i].name} eats {pet_list[i].food}")
+pet_info(pet_list)
