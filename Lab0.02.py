@@ -35,3 +35,12 @@ class Pet():
         self.food = food
         self.noise = noise
         self.name = name
+
+dog = Pet('dog','steak','woof','big boy')
+cat = Pet('cat','tuna','meow','death')
+fish = Pet('fish','other fish','splash','gideon')
+
+pet_list = [dog,cat,fish]
+
+for i in range(len(pet_list)):
+    print(f"{pet_list[i].name} eats {pet_list[i].food}")
