@@ -53,16 +53,19 @@ class WaterType(Pokemon):
     def __init__(self,name):
         Pokemon.__init__(self,name)
         self.name = name
+        self.type = 'water'
 
 class FireType(Pokemon):
     def __init__(self,name):
         Pokemon.__init__(self,name)
         self.name = name
+        self.type = 'fire'
 
 class GrassType(Pokemon):
     def __init__(self,name):
         Pokemon.__init__(self,name)
         self.name = name
+        self.type = 'grass'
 
 squirtle = WaterType('squirtle')
 charizard = FireType('charizard')
@@ -78,18 +81,42 @@ while True:
     player_pokemon = input("Which pokemon would you like to chose?: squirtle, charizard, or bulbosaur? - ")
     if player_pokemon == squirtle.name:
         player_poke_inv.append(squirtle)
+    elif player_pokemon == charizard.name:
+        player_poke_inv.append(charizard)
+    elif player_pokemon == bulbosaur.name:
+        player_poke_inv.append(bulbosaur)
+    else:
+        print('not a valid pokemon')
+
     random_pokemon = rand_poke(poke_list)
     print(f"A wild {random_pokemon.name} appeared! Which attack would you like to use?")
     move = input(f"growl - ")
     if move == 'growl':
-        if isinstance(player_poke_inv[0], WaterType) and isinstance(random_pokemon, WaterType):
+        # if isinstance(player_poke_inv[0], WaterType) and isinstance(random_pokemon, WaterType):
+        #     print('splash splash')
+        # elif isinstance(player_poke_inv[0], WaterType) and isinstance(random_pokemon, FireType):
+        #     print('splash splash')
+        #     print('Your attack was super effective!')
+        # elif isinstance(player_poke_inv[0], WaterType) and isinstance(random_pokemon, GrassType):
+        #     print('splash splash')
+        #     print('Your attack was not very effective...')
+        # elif isinstance(player_poke_inv[0], FireType) and isinstance(random_pokemon, FireType):
+        #     print('fire fire')
+        # elif isinstance(player_poke_inv[0], FireType) and isinstance(random_pokemon, WaterType):
+        #     print('fire fire')
+        #     print('Your attack was not very effective...')
+        # elif isinstance(player_poke_inv[0], FireType) and isinstance(random_pokemon, GrassType):
+        #     print('fire fire')
+        #     print('Your attack was super effective!')
+        # elif isinstance(player_poke_inv[0], GrassType) and isinstance(random_pokemon, GrassType):
+        #     print('cheep cheep')
+        # elif isinstance(player_poke_inv[0], GrassType) and isinstance(random_pokemon, WaterType):
+        #     print('cheep cheep')
+        #     print('Your attack was super effective!')
+        # elif isinstance(player_poke_inv[0], GrassType) and isinstance(random_pokemon, FireType):
+        #     print('cheep cheep')
+        #     print('Your attack was not very effective...')
+        # else:
+        #     print('not a valid move')
+        if isinstance(player_poke_inv[0], WaterType):
             print('splash splash')
-        elif isinstance(player_poke_inv[0], WaterType) and isinstance(random_pokemon, FireType):
-            print('splash splash')
-            print('Your attack was super effective!')
-        elif isinstance(player_poke_inv[0], WaterType) and isinstance(random_pokemon, GrassType):
-            print('splash splash')
-            print('Your attack was not very effective...')
-        elif isinstance(player_poke_inv[0], FireType) and isinstance(random_pokemon, FireType):
-            print('splash splash')
-            print('Your attack was super effective!')
